@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "452757216046",
+    "project_id": "quizbuzz-fbb3e",
+    "storage_bucket": "quizbuzz-fbb3e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:452757216046:android:ca816c6b062434a1d778bf",
+        "android_client_info": {
+          "package_name": "com.siddhantjaiswal.quizbuzz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "452757216046-qhc6rv6a4o4ts69hfpi4s4ig9342ald5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBy-NFW84OY0m5uai1n4pUi1Ecy5AHLVQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "452757216046-qhc6rv6a4o4ts69hfpi4s4ig9342ald5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
