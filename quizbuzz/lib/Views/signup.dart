@@ -1,18 +1,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-// import 'package:quizapp2/helper/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:quizbuzz/Services/auth.dart';
 import 'package:quizbuzz/Views/home.dart';
 import 'package:quizbuzz/Views/signin.dart';
 import 'package:quizbuzz/Widgets/widgets.dart';
 
-// import 'package:quizapp2/services/auth.dart';
-// import 'package:quizapp2/services/database.dart';
-// import 'package:quizapp2/views/home.dart';
-// import 'package:quizapp2/widget/widget.dart';
 
 class SignUp extends StatefulWidget {
   final Function toogleView;
@@ -48,9 +42,6 @@ class _SignUpState extends State<SignUp> {
           "email": email,
         };
 
-        // databaseService.addData(userInfo);
-
-        // Constants.saveUserLoggedInSharedPreference(true);
 
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => Home()));
