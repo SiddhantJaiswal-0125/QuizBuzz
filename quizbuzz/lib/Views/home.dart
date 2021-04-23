@@ -8,8 +8,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  SystemChrome.setSystemUIOverlayStyle(
-  SystemUiOverlayStyle(statusBarColor: Colors.black87));
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/material.dart'; 
+import 'package:flutter/material.dart';
 import 'package:quizbuzz/Services/auth.dart';
 import 'package:quizbuzz/Views/signup.dart';
 import 'package:quizbuzz/Widgets/widgets.dart';
@@ -48,6 +48,8 @@ class _SignInState extends State<SignIn> {
 
      }
  }
+ bool seepass = true;
+ IconData eye = Icons.remove_red_eye;
 
   @override
   Widget build(BuildContext context) {
@@ -93,12 +95,31 @@ class _SignInState extends State<SignIn> {
                       ),
                       // Spacer(),
                       TextFormField(
+
                         validator: (val)
                         {
                           return  val.isEmpty? " Enter Correct Password": null;
                         },
-                        obscureText: true,
+                        obscureText: seepass,
                         decoration: InputDecoration(
+                          suffixIcon: GestureDetector(
+                            onTap: ()
+                              {
+                                setState(() {
+
+                                  if(eye == Icons.remove_red_eye) {
+                                    seepass = false;
+                                    eye = Icons.remove_red_eye_outlined;
+                                  }
+                                  else
+                                    {
+                                      seepass = true;
+                                      eye = Icons.remove_red_eye;
+
+                                    }
+                                });
+                              },
+                              child: new Icon(eye)),
 
                             hintText: "Password"
                         ),
@@ -115,23 +136,7 @@ class _SignInState extends State<SignIn> {
 
                           signInmethod();
                         },
-                        child: Container(
-
-                          width: MediaQuery.of(context).size.width - 48,
-                          padding: EdgeInsets.symmetric(vertical:18),
-                          decoration: BoxDecoration(
-                            color: Colors.redAccent,
-                            borderRadius: BorderRadius.circular(50),
-                          ),
-                          // height: 50,
-                          child: Center(child: Text('Sign In' , style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20
-                          ),
-                          ),
-                          ),
-                          // child: ,
-                        ),
+                        child: tapButton(context, 'Sign In')
                       ),
                       SizedBox(height: 10,),
                       Center(
@@ -148,7 +153,7 @@ class _SignInState extends State<SignIn> {
                                   ),
                                   );
                                 },
-                                child: Text("Sign Up", style: TextStyle(fontSize: 16, decoration: TextDecoration.underline),)),
+                                child: Text("Sign Up", style: TextStyle(fontSize: 16, color: Colors.blue,decoration: TextDecoration.underline),)),
 
                           ],
                         ),

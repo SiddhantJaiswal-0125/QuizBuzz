@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+// import 'package:quizapp2/helper/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:quizbuzz/Services/auth.dart';
 import 'package:quizbuzz/Views/home.dart';
@@ -48,6 +50,8 @@ class _SignUpState extends State<SignUp> {
       });
     }
   }
+  bool seepass = true;
+  IconData eye = Icons.remove_red_eye;
 
   @override
   Widget build(BuildContext context) {
@@ -102,11 +106,32 @@ class _SignUpState extends State<SignUp> {
                           height: 6,
                         ),
                         TextFormField(
+
                           obscureText: true,
                           validator: (val) => val.length < 6
                               ? "Password must be 6+ characters"
                               : null,
-                          decoration: InputDecoration(hintText: "Password"),
+                          decoration: InputDecoration(
+                              suffixIcon: GestureDetector(
+                                  onTap: ()
+                                  {
+                                    setState(() {
+
+                                      if(eye == Icons.remove_red_eye) {
+                                        seepass = false;
+                                        eye = Icons.remove_red_eye_outlined;
+                                      }
+                                      else
+                                      {
+                                        seepass = true;
+                                        eye = Icons.remove_red_eye;
+
+                                      }
+                                    });
+                                  },
+                                  child: new Icon(eye)),
+
+                              hintText: "Password"),
                           onChanged: (val) {
                             password = val;
                           },
@@ -118,20 +143,7 @@ class _SignUpState extends State<SignUp> {
                           onTap: () {
                             getInfoAndSignUp();
                           },
-                          child: Container(
-                            alignment: Alignment.center,
-                            width: MediaQuery.of(context).size.width,
-                            padding: EdgeInsets.symmetric(
-                                horizontal: 24, vertical: 20),
-                            decoration: BoxDecoration(
-                                color: Colors.redAccent,
-                                borderRadius: BorderRadius.circular(30)),
-                            child: Text(
-                              "Sign Up",
-                              style: TextStyle(
-                                  fontSize: 16, color: Colors.white),
-                            ),
-                          ),
+                          child: tapButton(context, 'Sign Up')
                         ),
                         SizedBox(
                           height: 20,

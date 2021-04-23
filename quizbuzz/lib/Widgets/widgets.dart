@@ -16,6 +16,23 @@ Widget appBar(BuildContext  , String start , String end, double size)
       ),
     ),
   );
+}
+Widget tapButton(BuildContext context,String title)
+{
 
+ return Container(
+   alignment: Alignment.center,
+   width: MediaQuery.of(context).size.width,
+   padding: EdgeInsets.symmetric(
+       horizontal: 24, vertical: 20),
+   decoration: BoxDecoration(
+       color: Colors.redAccent,
+       borderRadius: BorderRadius.circular(30)),
+   child: Text(
+     title,
+     style: TextStyle(
+         fontSize: 16, color: Colors.white),
+   ),
+ );
 
 }
