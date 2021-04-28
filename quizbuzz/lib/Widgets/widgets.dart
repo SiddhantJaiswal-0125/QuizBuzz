@@ -17,12 +17,13 @@ Widget appBar(BuildContext  , String start , String end, double size)
     ),
   );
 }
-Widget tapButton(BuildContext context,String title)
+Widget tapButton(BuildContext context,String title, width)
 {
 
  return Container(
    alignment: Alignment.center,
-   width: MediaQuery.of(context).size.width,
+
+   width: width !=null ? width: (MediaQuery.of(context).size.width - 48),
    padding: EdgeInsets.symmetric(
        horizontal: 24, vertical: 20),
    decoration: BoxDecoration(

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:quizbuzz/Services/auth.dart';
 import 'package:quizbuzz/Views/signup.dart';
 import 'package:quizbuzz/Widgets/widgets.dart';
+import 'package:quizbuzz/helper/Functions.dart';
 import 'home.dart';
 
 
@@ -36,6 +37,8 @@ class _SignInState extends State<SignIn> {
            setState(() {
              _loading = false;
            });
+           HelperFunctions.saveUserLoggedInDetails(isLoggedIn: true);
+
            // print(value.toString());
            Navigator.pushReplacement(
              context, MaterialPageRoute(builder: (context) => Home(),
@@ -136,7 +139,7 @@ class _SignInState extends State<SignIn> {
 
                           signInmethod();
                         },
-                        child: tapButton(context, 'Sign In')
+                        child: tapButton(context, 'Sign In',MediaQuery.of(context).size.width)
                       ),
                       SizedBox(height: 10,),
                       Center(

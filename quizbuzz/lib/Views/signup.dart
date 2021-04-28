@@ -8,6 +8,7 @@ import 'package:quizbuzz/Services/auth.dart';
 import 'package:quizbuzz/Views/home.dart';
 import 'package:quizbuzz/Views/signin.dart';
 import 'package:quizbuzz/Widgets/widgets.dart';
+import 'package:quizbuzz/helper/Functions.dart';
 
 
 class SignUp extends StatefulWidget {
@@ -44,7 +45,7 @@ class _SignUpState extends State<SignUp> {
           "email": email,
         };
 
-
+        HelperFunctions.saveUserLoggedInDetails(isLoggedIn: true);
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => Home()));
       });
@@ -107,7 +108,7 @@ class _SignUpState extends State<SignUp> {
                         ),
                         TextFormField(
 
-                          obscureText: true,
+                          obscureText: seepass,
                           validator: (val) => val.length < 6
                               ? "Password must be 6+ characters"
                               : null,
@@ -127,6 +128,7 @@ class _SignUpState extends State<SignUp> {
                                         eye = Icons.remove_red_eye;
 
                                       }
+
                                     });
                                   },
                                   child: new Icon(eye)),
@@ -143,7 +145,7 @@ class _SignUpState extends State<SignUp> {
                           onTap: () {
                             getInfoAndSignUp();
                           },
-                          child: tapButton(context, 'Sign Up')
+                          child: tapButton(context, 'Sign Up',MediaQuery.of(context).size.width)
                         ),
                         SizedBox(
                           height: 20,

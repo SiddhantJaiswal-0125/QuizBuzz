@@ -16,9 +16,7 @@ class _CreateQuizState extends State<CreateQuiz> {
   bool _loading = false;
   createQuizOnline() async
   {
-    setState(() {
-      _loading = true;
-    });
+
     if(_formKey.currentState.validate())
       {
         quizId = randomAlphaNumeric(16);
@@ -29,11 +27,14 @@ class _CreateQuizState extends State<CreateQuiz> {
               "quiztitle" : _quizTitle,
               "quizDesc" : _quizDescription,
             };
+        setState(() {
+          _loading = true;
+        });
 
          await databaseService.addQuizData(quizMap, quizId).then((value) {
             setState(() {
               _loading = false;
-              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>AddQuestion(),
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>AddQuestion(quizId: quizId,),
               ));
             });
           });
@@ -114,7 +115,7 @@ class _CreateQuizState extends State<CreateQuiz> {
                   onTap: (){
                     createQuizOnline();
                   },
-                  child: tapButton(context, 'Create Quiz')),
+                  child: tapButton(context, 'Create Quiz',MediaQuery.of(context).size.width)),
               SizedBox(height: 30,)
             ],
           ),
