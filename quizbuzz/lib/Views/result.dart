@@ -25,7 +25,7 @@ class _ResultsState extends State<Results> {
               ),),
               SizedBox(height: 8,),
             Text("You answered ${widget.correct} answers  Correctly "
-                "and ${widget.incorrect}  answers Incorrectly",
+                "and ${widget.incorrect}  answers Incrrectly",
             textAlign: TextAlign.center,
             style:TextStyle(
               fontSize: 20,

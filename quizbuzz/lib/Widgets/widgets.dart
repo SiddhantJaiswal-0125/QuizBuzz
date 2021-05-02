@@ -37,3 +37,23 @@ Widget tapButton(BuildContext context,String title, width)
  );
 
 }
+Widget GoogleButton(BuildContext context,String title, width)
+{
+
+  return Container(
+    alignment: Alignment.center,
+  height: 60,
+    width: width !=null ? width: (MediaQuery.of(context).size.width - 48),
+    padding: EdgeInsets.symmetric(
+        horizontal: 24, vertical: 20),
+    decoration: BoxDecoration(
+        color: Colors.green,
+        borderRadius: BorderRadius.circular(30)),
+    child: Text(
+      title,
+      style: TextStyle(
+          fontSize: 16, color: Colors.white),
+    ),
+  );
+
+}

@@ -6,6 +6,8 @@ import 'package:quizbuzz/Views/signup.dart';
 import 'package:quizbuzz/Widgets/widgets.dart';
 import 'package:quizbuzz/helper/Functions.dart';
 import 'home.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 
 class SignIn extends StatefulWidget {
@@ -15,7 +17,34 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final GoogleSignIn googleSignIn = new GoogleSignIn();
   bool _loading = false;
+  Future <FirebaseUser> _signIn() async
+  {
+    GoogleSignInAccount googleSignInAccount = await googleSignIn.signIn();
+    GoogleSignInAuthentication _gsa = await googleSignInAccount.authentication;
+
+      AuthCredential authCredential = GoogleAuthProvider.getCredential(idToken: _gsa.idToken,
+      accessToken:  _gsa.accessToken);
+    setState(() {
+      _loading = true;
+    });
+    User user = (await _auth.signInWithCredential(authCredential)).user;
+    if(user!=null)
+      {
+        // print("NOT NULL SIDDHANT ");
+        setState(() {
+          _loading = false;
+
+        });
+        Navigator.pushReplacement(
+            context, MaterialPageRoute(builder: (context) => Home()));
+      }
+    // else print("NULL");
+
+  }
+
   final AuthServices _authService = AuthServices();
   String email,password;
 
@@ -32,7 +61,8 @@ class _SignInState extends State<SignIn> {
          _loading = true;
        });
 
-       await _authService.signInEmailAndPassword(email, password).then((value) {
+       await _authService.signInEmailAndPassword(email, password).then((value)
+       {
          if(value!=null) {
            setState(() {
              _loading = false;
@@ -136,11 +166,40 @@ class _SignInState extends State<SignIn> {
                       GestureDetector(
                         onTap: ()
                         {
-
                           signInmethod();
                         },
                         child: tapButton(context, 'Sign In',MediaQuery.of(context).size.width)
                       ),
+                      SizedBox(height: 10,),
+                      Divider(
+                          color:Colors.black,
+
+                          
+
+                        ),
+
+                      SizedBox(height: 10,),
+
+
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          IconButton(icon: Image.network
+                            ('https://cdn.wccftech.com/wp-content/uploads/2018/01/Google-Logo.png'),
+                              onPressed: _signIn,
+
+                          ),
+                          
+
+                        ],
+                      ),
+
+                      // GestureDetector(
+                      //   onTap: _signIn,
+                      //   child: GestureDetector(
+                      //       child: GoogleButton(context, "Google - SignIn", MediaQuery.of(context).size.width)),
+                      // ),
+
                       SizedBox(height: 10,),
                       Center(
                         child: Row(

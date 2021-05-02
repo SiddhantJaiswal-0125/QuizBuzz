@@ -32,8 +32,8 @@ dependencies:
   firebase_core: ^0.5.0
   cloud_firestore:
   firebase_auth:
+  google_sign_in:
   provider: ^3.2.0
-#  google_sign_in:
   shared_preferences: ^0.5+6+3
   random_string: ^2.0.1
 
