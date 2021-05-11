@@ -5,6 +5,14 @@ import 'package:quizbuzz/Views/PlayQuiz.dart';
 import 'package:quizbuzz/Views/signin.dart';
 import 'package:quizbuzz/Widgets/widgets.dart';
 class Home extends StatefulWidget {
+   //
+   // bool admin  =  false;
+   //
+   // Home({Key key, this.admin}) : super(key: key);
+  final int admin ;
+  Home(@required this.admin);
+
+
 
   @override
   _HomeState createState() => _HomeState();
@@ -14,6 +22,9 @@ class _HomeState extends State<Home> {
 
   Stream quizStream ;
   DatabaseService databaseService = new DatabaseService();
+  // final bool ad;
+  // _HomeState(this.ad);
+
 
   Widget quizList()
   {
@@ -55,6 +66,7 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    print("siddhant ${widget.admin} ");
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -79,7 +91,8 @@ class _HomeState extends State<Home> {
         brightness: Brightness.light,
       ),
       body: quizList(),
-      floatingActionButton: FloatingActionButton(
+      // body: ,
+      floatingActionButton:  widget.admin==1 ? FloatingActionButton(
         child: Icon(Icons.add),
         onPressed: (){
           Navigator.push(
@@ -87,7 +100,7 @@ class _HomeState extends State<Home> {
           ),
           );
         },
-      ),
+      ): null,
 
     );
   }

@@ -1,6 +1,8 @@
+// import 'dart:html';
+
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/material.dart';
 import 'package:quizbuzz/Services/auth.dart';
 import 'package:quizbuzz/Views/signup.dart';
 import 'package:quizbuzz/Widgets/widgets.dart';
@@ -8,7 +10,10 @@ import 'package:quizbuzz/helper/Functions.dart';
 import 'home.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
+import 'package:sign_button/sign_button.dart';
+import 'user.dart';
 
 class SignIn extends StatefulWidget {
 
@@ -17,6 +22,7 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
+
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = new GoogleSignIn();
   bool _loading = false;
@@ -27,6 +33,7 @@ class _SignInState extends State<SignIn> {
 
       AuthCredential authCredential = GoogleAuthProvider.getCredential(idToken: _gsa.idToken,
       accessToken:  _gsa.accessToken);
+    // Credential credential = AuthServices().cre
     setState(() {
       _loading = true;
     });
@@ -39,7 +46,7 @@ class _SignInState extends State<SignIn> {
 
         });
         Navigator.pushReplacement(
-            context, MaterialPageRoute(builder: (context) => Home()));
+            context, MaterialPageRoute(builder: (context) => Home( 1,)));
       }
     // else print("NULL");
 
@@ -71,7 +78,7 @@ class _SignInState extends State<SignIn> {
 
            // print(value.toString());
            Navigator.pushReplacement(
-             context, MaterialPageRoute(builder: (context) => Home(),
+             context, MaterialPageRoute(builder: (context) => Home(1),
            ),
            );
          }
@@ -83,6 +90,8 @@ class _SignInState extends State<SignIn> {
  }
  bool seepass = true;
  IconData eye = Icons.remove_red_eye;
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -171,58 +180,49 @@ class _SignInState extends State<SignIn> {
                         child: tapButton(context, 'Sign In',MediaQuery.of(context).size.width)
                       ),
                       SizedBox(height: 10,),
-                      Divider(
-                          color:Colors.black,
+                      // Divider(
+                      //     color:Colors.black,
+                      //
+                      //
+                      //
+                      //   ),
 
-                          
-
-                        ),
 
                       SizedBox(height: 10,),
+                      // SignInButton(
+                      //     buttonType: ButtonType.googleDark,
+                      //     buttonSize: ButtonSize.large,
+                      //
+                      //     imagePosition: ImagePosition.left,
+                      //     onPressed: _signIn,
+                      // ),
+                    SizedBox(height: 10,),
 
 
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          IconButton(icon: Image.network
-                            ('https://cdn.wccftech.com/wp-content/uploads/2018/01/Google-Logo.png'),
-                              onPressed: _signIn,
 
-                          ),
-                          
-
-                        ],
-                      ),
-
-                      // GestureDetector(
-                      //   onTap: _signIn,
-                      //   child: GestureDetector(
-                      //       child: GoogleButton(context, "Google - SignIn", MediaQuery.of(context).size.width)),
+                      SizedBox(height: 10,),
+                      // Center(
+                      //   child: Row(
+                      //     mainAxisAlignment: MainAxisAlignment.center,
+                      //     children: [
+                      //       // SizedBox(width: 15,),
+                      //       Text("Don't Have an Account" , style: TextStyle(fontSize: 16),),
+                      //       SizedBox(width: 20,),
+                      //       GestureDetector(
+                      //           onTap: (){
+                      //             Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
+                      //                 SignUp(),
+                      //             ),
+                      //             );
+                      //           },
+                      //           child: Text("Sign Up", style: TextStyle(fontSize: 16, color: Colors.blue,decoration: TextDecoration.underline),)),
+                      //
+                      //     ],
+                      //   ),
                       // ),
 
-                      SizedBox(height: 10,),
-                      Center(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            // SizedBox(width: 15,),
-                            Text("Don't Have an Account" , style: TextStyle(fontSize: 16),),
-                            SizedBox(width: 20,),
-                            GestureDetector(
-                                onTap: (){
-                                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>
-                                      SignUp(),
-                                  ),
-                                  );
-                                },
-                                child: Text("Sign Up", style: TextStyle(fontSize: 16, color: Colors.blue,decoration: TextDecoration.underline),)),
-
-                          ],
-                        ),
-                      ),
-
                       SizedBox(
-                        height: 80,
+                        height: 100,
                       )
 
 
@@ -232,6 +232,68 @@ class _SignInState extends State<SignIn> {
               ),
             )
       ),
+
+        bottomNavigationBar:   Container(
+    decoration: BoxDecoration(
+    color: Colors.white,
+      boxShadow: [
+        BoxShadow(
+          blurRadius: 10,
+          color: Colors.black.withOpacity(.1),
+        )
+      ],
+    ),
+           child: SafeArea(
+             child: Padding(
+               padding:
+                const EdgeInsets.symmetric(horizontal: 15.0, vertical: 8),
+                child: GNav(
+                rippleColor: Colors.black87,
+                hoverColor: Colors.blue,
+                gap: 8,
+                activeColor: Colors.black,
+                iconSize: 24,
+                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+                duration: Duration(milliseconds: 400),
+                tabBackgroundColor: Colors.yellow,
+                color: Colors.black,
+                tabs: [
+                GButton(
+                icon: Icons.account_box,
+                iconSize: 30,
+                text: 'ADMIN ',
+                onPressed: () {},
+                ),
+                GButton(
+                icon: Icons.supervisor_account_outlined,
+                text: 'USER',
+                onPressed: () {
+                // Navigator.pop(context);
+                Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                builder: (context) => userlogin(),
+                ))
+                ;
+                },
+                ),
+
+                ],
+                selectedIndex: 0,
+                // onTabChange: (index) {
+                // setState(() {
+                // _selectedIndex = index;
+                // }
+                // );
+
+                ),
+                ),
+    ),
+    ),
+
+
+
     );
   }
 }
+

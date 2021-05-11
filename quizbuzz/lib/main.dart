@@ -47,7 +47,7 @@ class _MyAppState extends State<MyApp> {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: (_isLoggedIn??false )? Home():SignIn(),
+      home: (_isLoggedIn??false )? Home(0):SignIn(),
       // home: SignIn(),
     );
   }

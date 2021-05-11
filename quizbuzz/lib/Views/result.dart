@@ -38,7 +38,7 @@ class _ResultsState extends State<Results> {
               GestureDetector(
                 onTap: (){
                   Navigator.pushReplacement(context, MaterialPageRoute(builder:
-                      (context)=>Home(),));
+                      (context)=>Home(0),));
                 },
                   child: tapButton(context, "Go To Home", MediaQuery.of(context).size.width - 40))
 
