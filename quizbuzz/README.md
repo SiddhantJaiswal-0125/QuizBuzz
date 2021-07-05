@@ -1,6 +1,5 @@
-# quizbuzz
-
-A new Flutter application.
+# QuizBuzz
+A Mobile Application(made with Flutter) where the admin can upload question and can provide pictorial representation too and the required students/candidates can give there test.
 
 ## Getting Started
 
