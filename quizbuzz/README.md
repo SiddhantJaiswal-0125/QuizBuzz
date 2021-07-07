@@ -1,6 +1,5 @@
 # QuizBuzz
-A Mobile Application(made with Flutter) where the admin can upload question and can provide pictorial representation too and the required students/candidates can give there test.
-
+A Mobile Application where the admin can upload questions and can provide pictorial representation too and the required students/candidates can give their test.
 ## Getting Started
 
 This project is a starting point for a Flutter application.
