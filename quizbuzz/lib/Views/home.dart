@@ -5,7 +5,7 @@ import 'package:quizbuzz/Views/PlayQuiz.dart';
 import 'package:quizbuzz/Views/signin.dart';
 import 'package:quizbuzz/Widgets/widgets.dart';
 class Home extends StatefulWidget {
-   //
+  //
    // bool admin  =  false;
    //
    // Home({Key key, this.admin}) : super(key: key);
