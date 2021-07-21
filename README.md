@@ -26,7 +26,7 @@ Home Screen
 
 # Supported Platforms
 
-* [Android]
+* Android
 
 
 
