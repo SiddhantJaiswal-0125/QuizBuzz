@@ -21,7 +21,9 @@ Home Screen
 4.Admin Panel Screen
 
 # User Authentication / Admin login & Register
-1. 
+* Google Authentication
+* Mobile OTP (- later version)
+
 
 
 # Supported Platforms
