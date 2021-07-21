@@ -78,6 +78,8 @@ class _SignInState extends State<SignIn> {
 
            // print(value.toString());
            Navigator.pushReplacement(
+
+             //admin page
              context, MaterialPageRoute(builder: (context) => Home(1),
            ),
            );

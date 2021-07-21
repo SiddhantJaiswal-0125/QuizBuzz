@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 class OptionTile extends StatefulWidget {
   final String option, decription,correctAnswer , optionSelected;
-  final bool show ;
+  // final bool show ;
 
   OptionTile({
     @required this.option,@required  this.decription,
-  @required  this.correctAnswer,@required this.optionSelected, this .show});
+  @required  this.correctAnswer,@required this.optionSelected});
   
   @override
   _OptionTileState createState() => _OptionTileState();
@@ -15,17 +15,17 @@ class _OptionTileState extends State<OptionTile> {
   @override
   Widget build(BuildContext context) {
     Color co ;
-    if(widget.show)
-      {
+    // if(widget.show)
+    //   {
      co =   widget.decription == widget.optionSelected?
         ( widget.optionSelected == widget.correctAnswer   ?
-        Colors.green.withOpacity(0.8) : Colors.red.withOpacity(0.9)
+        Colors.green.withOpacity(1) : Colors.red.withOpacity(0.9)
         )  : Colors.grey;
-      }
-    else{
-      co = widget.decription == widget.optionSelected? Colors.blue: Colors.grey;
+    //   }
+    // else{
+    //   co = widget.decription == widget.optionSelected? Colors.blue: Colors.grey;
 
-    }
+    // }
     return Container(
       padding: EdgeInsets.symmetric(vertical: 5),
       child: Row(

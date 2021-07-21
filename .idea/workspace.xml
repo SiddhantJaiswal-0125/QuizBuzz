@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="abd6849d-462d-40b6-8f40-efe6a17ca70e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/quizbuzz/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/quizbuzz/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quizbuzz/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/quizbuzz/pubspec.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1v9spOLM33vRsrsaY9nxcpsdu1d" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="AnalyzeApkAction.lastApkPath" value="$PROJECT_DIR$/../../.." />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter" temporary="true" nameIsGenerated="true">
+      <option name="filePath" value="$PROJECT_DIR$/quizbuzz/lib/main.dart" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Flutter.main.dart" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="abd6849d-462d-40b6-8f40-efe6a17ca70e" name="Default Changelist" comment="" />
+      <created>1625985822788</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625985822788</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="186" y="137" width="963" height="620" key="AVDManager" timestamp="1626000890368">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="100" y="125" width="963" height="620" key="AVDManager/0.25.1440.875/1440.25.1366.743@0.25.1440.875" timestamp="1625988696382" />
+    <state x="186" y="137" width="963" height="620" key="AVDManager/0.25.1440.875@0.25.1440.875" timestamp="1626000890368" />
+    <state width="1124" height="240" key="GridCell.Tab.0.bottom" timestamp="1626001720396">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1625992033084" />
+    <state width="1121" height="240" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.25.1366.743@0.25.1440.875" timestamp="1625988378142" />
+    <state width="1121" height="204" key="GridCell.Tab.0.bottom/0.25.1440.875/1440.25.1366.743@1440.25.1366.743" timestamp="1625994000056" />
+    <state width="1124" height="240" key="GridCell.Tab.0.bottom/0.25.1440.875@0.25.1440.875" timestamp="1626001720396" />
+    <state width="1124" height="240" key="GridCell.Tab.0.center" timestamp="1626001720395">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1625992033082" />
+    <state width="1121" height="240" key="GridCell.Tab.0.center/0.25.1440.875/1440.25.1366.743@0.25.1440.875" timestamp="1625988378138" />
+    <state width="1121" height="204" key="GridCell.Tab.0.center/0.25.1440.875/1440.25.1366.743@1440.25.1366.743" timestamp="1625994000055" />
+    <state width="1124" height="240" key="GridCell.Tab.0.center/0.25.1440.875@0.25.1440.875" timestamp="1626001720395" />
+    <state width="1124" height="240" key="GridCell.Tab.0.left" timestamp="1626001720395">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1625992033080" />
+    <state width="1121" height="240" key="GridCell.Tab.0.left/0.25.1440.875/1440.25.1366.743@0.25.1440.875" timestamp="1625988378134" />
+    <state width="1121" height="204" key="GridCell.Tab.0.left/0.25.1440.875/1440.25.1366.743@1440.25.1366.743" timestamp="1625994000054" />
+    <state width="1124" height="240" key="GridCell.Tab.0.left/0.25.1440.875@0.25.1440.875" timestamp="1626001720395" />
+    <state width="1124" height="240" key="GridCell.Tab.0.right" timestamp="1626001720396">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state width="1398" height="240" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1625992033083" />
+    <state width="1121" height="240" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1366.743@0.25.1440.875" timestamp="1625988378140" />
+    <state width="1121" height="204" key="GridCell.Tab.0.right/0.25.1440.875/1440.25.1366.743@1440.25.1366.743" timestamp="1625994000055" />
+    <state width="1124" height="240" key="GridCell.Tab.0.right/0.25.1440.875@0.25.1440.875" timestamp="1626001720396" />
+    <state x="363" y="314" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1625999549519">
+      <screen x="0" y="25" width="1440" height="875" />
+    </state>
+    <state x="363" y="314" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1440.875@0.25.1440.875" timestamp="1625999549519" />
+  </component>
+</project>

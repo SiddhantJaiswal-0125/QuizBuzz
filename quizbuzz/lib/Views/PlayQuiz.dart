@@ -67,7 +67,7 @@ options.shuffle();
     print("quiz id is${widget.quizId}");
     super.initState();
   }
-  bool showanswer = false;
+  // bool showanswer = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -100,7 +100,7 @@ options.shuffle();
       // bool show = false;
               return QuizPlayTile(
                       getQuestionModelFromDataSnapshot(questionSnapshot.documents[index] ),
-                    index,  showanswer
+                    index
               );
 
             },),
@@ -126,7 +126,7 @@ options.shuffle();
           child: Icon(Icons.check),
           onPressed: (){
 
-            showanswer = true;
+            // showanswer = true;
             done = false;
 
             setState(() {
@@ -153,10 +153,10 @@ options.shuffle();
 class QuizPlayTile extends StatefulWidget {
   final QuestionModel questionModel;
   final int index;
-  final bool showans;
+  // final bool showans;
 
 
-  QuizPlayTile(this.questionModel, this.index, this.showans);
+  QuizPlayTile(this.questionModel, this.index);
   @override
   _QuizPlayTileState createState() => _QuizPlayTileState();
 }
@@ -204,7 +204,7 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
               decription: widget.questionModel.option1,
               option: "A",
               optionSelected: optionSelected,
-              show: widget.showans,
+              // show: widget.showans,
             ),
           ),
           SizedBox(height: 4,),
@@ -243,7 +243,7 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
               decription: widget.questionModel.option2,
               option: "B",
               optionSelected: optionSelected,
-              show: widget.showans,
+              // show: widget.showans,
             ),
           ),
           SizedBox(height: 4,),
@@ -281,7 +281,7 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
               decription: widget.questionModel.option3,
               option: "C",
               optionSelected: optionSelected,
-              show: widget.showans,
+              // show: widget.showans,
             ),
           )
           ,
@@ -321,7 +321,7 @@ class _QuizPlayTileState extends State<QuizPlayTile> {
               decription: widget.questionModel.option4,
               option: "D",
               optionSelected: optionSelected,
-              show: widget.showans,
+              // show: widget.showans,
             ),
           ),
           SizedBox(

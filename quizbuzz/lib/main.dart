@@ -7,7 +7,7 @@ import 'package:quizbuzz/helper/Functions.dart';
 void main()  async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp( MyApp() );
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
