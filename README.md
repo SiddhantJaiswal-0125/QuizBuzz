@@ -20,13 +20,13 @@ Home Screen
 
 
 
-1.Quiz Page / Questions page
+1. Quiz Page / Questions page
 
-2.Results page with Chart
+2. Results page with Chart
 
-3.Detailed Report for Quiz took
+3. Detailed Report for Quiz took
 
-4.Admin Panel Screen
+4. Admin Panel Screen
 
 # User Authentication / Admin login & Register
 * Google Authentication
