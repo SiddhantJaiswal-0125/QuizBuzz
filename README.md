@@ -21,11 +21,13 @@ Home Screen
 4.Admin Panel Screen
 
 # User Authentication / Admin login & Register
+1. 
 
 
 # Supported Platforms
 
-1.Android
+* [Android]
+
 
 
 ## Getting Started
