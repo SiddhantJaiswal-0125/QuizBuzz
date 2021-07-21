@@ -1,5 +1,13 @@
 # Quiz-App
 
+![](https://img.shields.io/badge/Language-Dart-blue)   
+![](https://img.shields.io/badge/SDK-Flutter-yellow)   
+![](https://img.shields.io/badge/Download-Concure-orange)
+
+
+![alt text](http://icons.iconarchive.com/icons/paomedia/small-n-flat/64/star-alt-icon.png) 
+* Star this Repo. if you like the app & support me, this keeps me motivated and keep going for further development
+
 A Mobile Application where the admin can upload questions and can provide pictorial representation too and the required students/candidates can give their test.
 Although the topics can be changed by changing the Firestore data for really any other types of quiz.
 Going with Flutter is a easy choice with its quick development time and fast execution times.
